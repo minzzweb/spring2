@@ -18,5 +18,5 @@
 	<bean class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource"></property>
 	</bean>
-	<mybatis-spring:scan base-package="kr.bit.mapper"/>
+	<mybatis-spring:scan base-package="kr.min.mapper"/>
 </beans>
