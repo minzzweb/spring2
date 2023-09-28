@@ -22,7 +22,7 @@
 	</beans:bean>
 	
 	<context:component-scan base-package="kr.min.controller" />
-	
+	<context:component-scan base-package="kr.min.service" />
 	
 	
 </beans:beans>
