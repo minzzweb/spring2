@@ -19,7 +19,28 @@
   <div class="panel panel-default">
     <div class="panel-heading">BOARD</div>
     <div class="panel-body">
-      
+      <table class="table table-bordered table-hover"> 
+        <thead>
+          <tr>
+            <th>번호</th>
+            <th>제목</th>
+            <th>작성자</th>
+            <th>작성일</th>
+            <th>조회수</th>
+          </tr>
+        </thead>
+      	<c:forEach var="vo" items="${list}">
+      		 <tr>
+	            <td>${vo.idx}</td>
+	            <td>${vo.title}</td>
+	            <td>${vo.content}</td>
+	            <td>
+	           	 <fmt:formatDate pattern="yyyy-MM-dd" value="${vo.indate}"/>
+	            </td>
+	            <td>${vo.count}</td>
+          </tr>
+      	</c:forEach>
+      </table>
     </div>
     <div class="panel-footer">스프2탄(답변형 게시판 만들기)</div>
   </div>
