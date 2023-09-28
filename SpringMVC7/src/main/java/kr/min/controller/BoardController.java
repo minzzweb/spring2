@@ -26,6 +26,12 @@ public class BoardController {
 		 //객체바인딩
 		 model.addAttribute("list",list);
 		
-		return "board/boardList";
+		return "board/list";
+	}
+	
+	
+	@GetMapping("/register")
+	public String register() {
+		return "board/register";
 	}
 }

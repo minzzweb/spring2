@@ -12,6 +12,13 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("#regBtn").click(function() {
+			location.href="${cpath}/board/register";
+		});
+	});
+</script>
 </head>
 <body>
 <div class="container">
@@ -38,11 +45,17 @@
 	           	 <fmt:formatDate pattern="yyyy-MM-dd" value="${vo.indate}"/>
 	            </td>
 	            <td>${vo.count}</td>
-          </tr>
+             </tr>
+            
       	</c:forEach>
+      	 <tr>
+             	<td colspan="5">
+             		<button id="regBtn" class="btn btn-xs pull-right">글쓰기</button>
+             	</td>
+         </tr>
       </table>
     </div>
-    <div class="panel-footer">스프2탄(답변형 게시판 만들기)</div>
+    	<div class="panel-footer">스프2탄(답변형 게시판 만들기)</div>
   </div>
 </div>
 </body>
