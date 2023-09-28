@@ -40,7 +40,7 @@ public class BoardControllerTest {
 				mockMvc.perform(MockMvcRequestBuilders.get("/board/list"))
 				//결과를 받음
 				.andReturn()
-				.getModelAndView().getModel()
+				.getModelAndView().getModelMap()
 				);
 	}
 	
