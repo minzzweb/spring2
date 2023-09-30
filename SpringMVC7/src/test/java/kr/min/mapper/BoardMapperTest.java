@@ -30,12 +30,13 @@ public class BoardMapperTest {
 	@Test
 	public void testInsert() {
 		Board vo = new Board();
-		vo.setMemID("min01");
-		vo.setTitle("A");
+		vo.setMemID("min02");
+		vo.setTitle("B");
 		vo.setContent("새로작성한 글");
 		vo.setWriter("관리자");
 		
-		boardMapper.insert(vo);
+		//boardMapper.insert(vo);
+		boardMapper.insertSelectKey(vo);
 		
 	}
 	
