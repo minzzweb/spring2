@@ -10,7 +10,9 @@ import kr.min.entity.Board;
 public interface BoardMapper {	
 	//list
 	public List<Board> getList();
+	
 	//create
+	 public void insert(Board vo);
 	
 	//read
 	

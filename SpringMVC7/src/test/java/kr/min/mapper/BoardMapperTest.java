@@ -27,4 +27,16 @@ public class BoardMapperTest {
 			System.out.println(vo);
 		}
 	}
+	@Test
+	public void testInsert() {
+		Board vo = new Board();
+		vo.setMemID("min01");
+		vo.setTitle("A");
+		vo.setContent("새로작성한 글");
+		vo.setWriter("관리자");
+		
+		boardMapper.insert(vo);
+		
+	}
+	
 }

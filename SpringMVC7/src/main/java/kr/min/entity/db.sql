@@ -34,6 +34,9 @@ now(),0, IFNULL(max(boardGroup)+1, 0), 0, 0, 1
 from tblBoard;
 
 select * from tblBoard;
+delete from tblBoard where idx=1;
+delete from tblBoard where idx=2;
+delete from tblBoard where idx=3;
 
 -- 회원테이블 --
 create table tblMember(
