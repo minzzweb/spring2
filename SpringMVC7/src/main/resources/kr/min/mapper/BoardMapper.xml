@@ -28,4 +28,8 @@
 			 values(#{idx},#{memID},#{title},#{content},#{writer},#{boardGroup},0,0,1)	     
          </insert>
       
+      <select id="login" resultType="kr.min.entity.Member" parameterType="kr.min.entity.Member">
+      	select * from tblMember where memID = #{memID} and memPwd = #{memPwd}
+      	
+      </select>
 </mapper>

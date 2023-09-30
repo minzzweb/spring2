@@ -5,6 +5,7 @@ import java.util.List;
 import org.apache.ibatis.annotations.Mapper;
 
 import kr.min.entity.Board;
+import kr.min.entity.Member;
 
 //@Mapper
 public interface BoardMapper {	
@@ -20,4 +21,8 @@ public interface BoardMapper {
 	//update
 	
 	//delete
+	 
+	 
+	 //login 
+	 public Member login(Member vo);
 }

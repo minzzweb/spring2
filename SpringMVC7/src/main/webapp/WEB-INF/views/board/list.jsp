@@ -24,6 +24,31 @@
 <div class="container">
   <h2>Spring MVC</h2>
   <div class="panel panel-default">
+    <div class="panel-heading">
+        <c:if test="${empty mvo}">
+	     <form class="form-inline" action="${cpath}/login/loginProcess" method="post">
+		  <div class="form-group">
+		    <label for="memID">ID:</label>
+		    <input type="text" class="form-control" name="memID">
+		  </div>
+		  <div class="form-group">
+		    <label for="memPwd">Password:</label>
+		    <input type="password" class="form-control" name="memPwd">
+		  </div>
+		  <button type="submit" class="btn btn-default">로그인</button>
+		 </form>
+		</c:if>
+		 <c:if test="${!empty mvo}">
+		 <form class="form-inline" action="${cpath}/login/logoutProcess" method="post">
+		  <div class="form-group">
+		    <label>${mvo.memName}님 방문을 환영합니다.</label>		    
+		  </div>
+		  <button type="submit" class="btn btn-default">로그아웃</button>
+		 </form>
+		 </c:if>
+		
+    </div>
+  <div class="panel panel-default">
     <div class="panel-heading">BOARD</div>
     <div class="panel-body">
       <table class="table table-bordered table-hover"> 
